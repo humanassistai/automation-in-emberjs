@@ -10,7 +10,6 @@ module.exports = function(deployTarget) {
     },
     // include other plugin configuration that applies to all deploy targets here
   's3': {
-    filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,html,json}',
     accessKeyId: "AKIAJT3DY7F35XQEYXAA",
     secretAccessKey: "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",
     bucket: "com.humanassistai",
