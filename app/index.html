@@ -13,12 +13,520 @@
     <link rel="stylesheet" href="{{rootURL}}assets/my-new-app.css">
 
     {{content-for "head-footer"}}
+    <!-- CSS
+    ================================================== -->
+    <!-- Template Styles -->
+    <link href="{{rootURL}}assets/css/style.css" rel="stylesheet" media="screen">
+    <!-- Bootstrap 3-->
+    <link href="{{rootURL}}assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="{{rootURL}}assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="{{rootURL}}assets/css/bootstrapValidator.min.css" rel="stylesheet" media="screen">
+    <link href="{{rootURL}}assets/css/jquery.fullPage.css" rel="stylesheet" media="screen">
+    <link rel="icon" href="humanassitai.ico">
+
+    <style media="screen">
+       .glyphicon{
+         position: absolute!important;
+       }
+    </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/my-new-app.js"></script>
+
+  <!-- NAVBAR
+      ================================================== -->
+  <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!--Replace text with your app name or logo image-->
+        <a class="navbar-brand" href="#">Human Assist AI</a>
+
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li id="purchaseTop"><a href="#purchase-sec"onclick="$('.purchase').animatescroll({padding:71});">Features</a></li>
+          <li id="detailTop"><a href="#detail-sec" onclick="$('.detail').animatescroll({padding:71});">Platform</a></li>
+          <li id="featuresTop"><a href="#features-sec" onclick="$('.features').animatescroll({padding:71});">Business</a></li>
+          <li id="getItTop"><a href="#get-it-sec" onclick="$('.get-it').animatescroll({padding:71});">Contact	</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+   <!-- HEADER
+   ================================================== -->
+  <header>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-4">
+         <div class="top-buffer">
+          <span>Human Assist AI</span>
+          <p class="lead">Businesses on Messenger</p>
+          <span>Have personal, real-time converstaions with your customers </span>
+          <div style="margin-top:5px"></div>
+          <a href="#get-it-sec">
+            <button type="button" class="" id="facebook">SIGN UP</button>
+          </a>
+
+         </div>
+    </div>
+    <div class="col-md-8">
+      <div class="carousel-iphone">
+        <div id="carousel-example-generic" class="carousel slide">
+          <div class="chat-fb" id="Chatbox">
+        <!-- Indicators -->
+         <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+             <img src="{{rootURL}}assets/img/screenshots/1.png" alt="App Screen 1" class="img-responsive">
+          </div>
+          <div class="item">
+            <img src="{{rootURL}}assets/img/screenshots/2.png" alt="App Screen 2" class="img-responsive">
+          </div>
+          <div class="item">
+            <img src="{{rootURL}}assets/img/screenshots/app-3.png" alt="App Screen 3" class="img-responsive">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+ </header>
+
+<div id="fullpage">
+  <!-- PURCHASE
+      ================================================== -->
+  <section class="purchase" id="purchase-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+         <h2>Connect with your customers.</h2>
+              <p>When people check out on your website, they can sign up to connect with you in Messenger. Then you'll be able to send them personalized updates. </p>
+              <!-- <div class="thumbnail"> -->
+              <img src="{{rootURL}}assets/img/connect_cust.png" alt="..." style="max-width: 100%;height: auto;" />
+            <!--   <div class="wrapper">
+                  <div class="caption post-content">
+                      <h3>Robots!</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                  </div>
+              </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+      <!-- PURCHASE
+          ================================================== -->
+      <section class="purchase">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+             <h2>Send rich, detailed messages they'll appreciate</h2>
+                  <p class="lead">Use custom layouts designed for order confirmation, shipping updates and more. This lets your customers keep all their order info in one place and reach out to you if they need to change anything.</p>
+                  <div id="products" class="row list-group">
+                      <div class="item  col-xs-4 col-lg-4">
+                          <div class="thumbnail">
+                              <img class="group list-group-image" src="{{rootURL}}assets/img/detail_1.png" alt="" />
+                              <div class="caption">
+                                  <!-- <h4 class="group inner list-group-item-heading">
+                                      Product title</h4>
+                                  <p class="group inner list-group-item-text">
+                                      Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                  <div class="row">
+                                      <div class="col-xs-12 col-md-6">
+                                          <p class="lead">
+                                              $21.000</p>
+                                      </div>
+                                      <div class="col-xs-12 col-md-6">
+                                          <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                                      </div>
+                                  </div> -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item  col-xs-4 col-lg-4">
+                          <div class="thumbnail">
+                              <img class="group list-group-image" src="{{rootURL}}assets/img/detail_2.png" alt="" />
+                              <div class="caption">
+                                  <!-- <h4 class="group inner list-group-item-heading">
+                                      Product title</h4>
+                                  <p class="group inner list-group-item-text">
+                                      Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                  <div class="row">
+                                      <div class="col-xs-12 col-md-6">
+                                          <p class="lead">
+                                              $21.000</p>
+                                      </div>
+                                      <div class="col-xs-12 col-md-6">
+                                          <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                                      </div>
+                                  </div> -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item  col-xs-4 col-lg-4">
+                          <div class="thumbnail">
+                              <img class="group list-group-image" src="{{rootURL}}assets/img/detail_3.png" alt="" />
+                              <div class="caption">
+                                  <!-- <h4 class="group inner list-group-item-heading">
+                                      Product title</h4>
+                                  <p class="group inner list-group-item-text">
+                                      Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                  <div class="row">
+                                      <div class="col-xs-12 col-md-6">
+                                          <p class="lead">
+                                              $21.000</p>
+                                      </div>
+                                      <div class="col-xs-12 col-md-6">
+                                          <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                                      </div>
+                                  </div> -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+          </div>
+        </div>
+      </section>
+
+
+  <!-- PAYOFF
+      ================================================== -->
+  <!-- <section class="payoff">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>“human-assist-A.I.” an interface designed to enable users to accomplish complex tasks through a natural dialogue with an assistant.</h1>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- DETAILS
+      ================================================== -->
+  <section class="detail" id="detail-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+       <h2>Offer support on  a whole new level.</h2>
+            <p class="lead">Be availabe to your customers in a more personal way and answer any questions that come up through your preffered</p>
+            <p class="lead"> live chat provider. </p>
+      </div
+      <div class="col-md-12">
+        <div id="carousel-example-generic-2" class="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+                <div class="row">
+                  <div class="col-sm-12 col-md-5">
+                    <div class="">
+                      <img src="{{rootURL}}assets/img/features.png" class="img-responsive" alt="App Screen 1">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-offset-1 col-md-6 feature-list">
+                    <h2 style="text-align:start">FEATURES</h2>
+                    <p style="text-align:start">Send and receive photos and text messages. Plus, you'll know when your messages are sent, delivered and seen.</p>
+                    <div style="margin-top:30px"></div>
+                    <h2 style="text-align:start">PARTNERING WITH</h2>
+                    <p style="text-align:start">Are you a live chat provider? To learn more about integrating with Messenger.</p>
+                     <a href="#get-it-sec" style="text-align:start">Sign Up</a>
+                    <!-- <button type="button pull-left" class="btn btn-primary">SIGN UP</button> -->
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Indicators -->
+         <!--  <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic-2" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic-2" data-slide-to="2"></li>
+          </ol> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FEATURES
+      ================================================== -->
+  <section class="features" id="features-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+       <h2>Make it easy to stay in touch.</h2>
+            <p class="lead">Reach customers wherever they are with timely, relevant push notifications.</p>
+            <!-- <div class="thumbnail"> -->
+            <div class="img_contact">
+              <img src="{{rootURL}}assets/img/contact.png" alt="..." class="img-responsive"/>
+            </div>
+            <!-- </div> -->
+    </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- SOCIAL
+     ================================================== -->
+  <!-- <section class="social">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Connect with us</h2>
+            <a class="icon-facebook"></a>
+            <a class="icon-twitter"></a>
+            <a class="icon-google"></a>
+            <a class="icon-instagram"></a>
+            <a class="icon-pinterest"></a>
+           </div>
+        </div>
+      </div>
+  </section> -->
+
+
+ <!-- GET IT
+     ================================================== -->
+  <section class="get-it" id="get-it-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <h2>Interested?</h2>
+          <p class="lead">Let us know if you want to connect with your customers on Messenger.</p>
+          <form class="form-horizontal" id="contact_form" action="sendmail" method="post">
+
+          <!-- Password input-->
+          <div class="form-group">
+            <div class="col-md-5 col-md-offset-3">
+              <input id="company-name" name="company_name" placeholder="Company Name" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+
+            <div class="col-md-5 col-md-offset-3">
+              <input id="contact-name" name="contact_name" type="text" placeholder="Your Name" class="form-control input-md" required="">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+
+            <div class="col-md-5 col-md-offset-3">
+            <input id="contact-email" name="contact_email" type="text" placeholder="Email" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <div class="col-md-5 col-md-offset-3">
+            <input id="industry" name="industry" type="text" placeholder="Industry" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <div class="col-md-5 col-md-offset-3">
+            <input id="number-employess" name="number-employess" type="text" placeholder="Number of Employees" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="check-type"></label>
+            <div class="col-md-5">
+              <label>Type: </label>
+
+              <label class="radio-inline" for="check-type-0">
+                <input type="radio" name="check-type" id="check-type-0" value="Business" checked="checked">
+                Business
+              </label>
+
+              <label class="radio-inline" for="check-type-1">
+                <input type="radio" name="check-type" id="check-type-1" value="System Integrator">
+                System Integrator
+              </label>
+              <!-- <div class="col-md-4"> -->
+                <button id="contact-submit" name="contact-submit" class="btn btn-primary">Submit</button>
+              <!-- </div> -->
+            </div>
+          </div>
+          </form>
+          <!-- sucess message auto close -->
+          <div class="alert alert-success hidden send-mail-success" id="success-alert">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong>You are connected with us now ! </strong>
+              Thank you for your interest.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  <footer>
+    <div class="container text-center">
+      <!-- <hr /> -->
+    <!-- <div class="row"> -->
+      <div class="col-lg-12">
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">Product for Mac</a></li>
+            <li><a href="#">Product for Windows</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">Web analytics</a></li>
+            <li><a href="#">Presentations</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">Product Help</a></li>
+            <li><a href="#">Developer API</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="nav nav-pills nav-justified">
+                  <li><a href="/" id="company-time">© 2013 Human Assist AI.</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </footer>
+
+
+ <!-- JAVASCRIPT
+     ================================================== -->
+  <script src="{{rootURL}}assets/js/jquery.js"></script>
+  <script src="{{rootURL}}assets/js/bootstrap.min.js"></script>
+  <script src="{{rootURL}}assets/js/animatescroll.js"></script>
+  <script src="{{rootURL}}assets/js/scripts.js"></script>
+  <script src="{{rootURL}}assets/js/retina.min.js"></script>
+  <script src="{{rootURL}}assets/js/bootstrapValidator.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    // $('#fullpage').fullpage();
+     var date = new Date();
+     $('#company-time').text("© "+date.getFullYear()+" Human Assist AI.");
+     $('#contact_form').bootstrapValidator({
+         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+         feedbackIcons: {
+             valid: 'glyphicon glyphicon-ok',
+             invalid: 'glyphicon glyphicon-remove',
+             validating: 'glyphicon glyphicon-refresh'
+         },
+         fields: {
+             company_name: {
+                 validators: {
+                         stringLength: {
+                         min: 2,
+                     },
+                         notEmpty: {
+                         message: 'Please supply your company name'
+                     }
+                 }
+             },
+              contact_name: {
+                 validators: {
+                      stringLength: {
+                         min: 2,
+                     },
+                     notEmpty: {
+                         message: 'Please supply your contact name'
+                     }
+                 }
+             },
+             contact_email: {
+                 validators: {
+                     notEmpty: {
+                         message: 'Please supply your email address'
+                     },
+                     emailAddress: {
+                         message: 'Please supply a valid email address'
+                     }
+                 }
+             },
+             }
+         })
+         .on('success.form.bv', function(e) {
+              $('.send-mail-success').removeClass('hidden');
+            //  $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                 $('#contact_form').data('bootstrapValidator').resetForm();
+
+             // Prevent form submission
+             e.preventDefault();
+
+             // Get the form instance
+             var $form = $(e.target);
+
+             // Get the BootstrapValidator instance
+             var bv = $form.data('bootstrapValidator');
+
+             // Use Ajax to submit form data
+             $.post($form.attr('action'), $form.serialize(), function(result) {
+                 console.log(result);
+
+             }, 'json');
+         });
+       });
+
+
+  </script>
+  <!-- HYDRA
+     ================================================== -->
+    <!-- <script src="js/human_assist.min.js"></script> -->
+
 
     {{content-for "body-footer"}}
   </body>
