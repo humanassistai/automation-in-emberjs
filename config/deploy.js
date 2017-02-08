@@ -10,14 +10,14 @@ module.exports = function(deployTarget) {
     },
     // include other plugin configuration that applies to all deploy targets here
   's3': {
-    accessKeyId: "AKIAJT3DY7F35XQEYXAA",
-    secretAccessKey: "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",
+    accessKeyId: "XXXXXXXXX",
+    secretAccessKey: "XXXXXXXXXXX",
     bucket: "com.humanassistai",
     region: "us-east-1"
   },
   's3-index': {
-    accessKeyId: "AKIAJT3DY7F35XQEYXAA",
-    secretAccessKey: "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",
+    accessKeyId: "XXXXXXXXX",
+    secretAccessKey: "XXXXXXXXXXXX",
     bucket: "com.humanassistai",
     region: "us-east-1",
     allowOverwrite: true
